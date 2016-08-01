@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:id="@+id/user_center_bg"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_usercenter_bg" />
+
+    <ImageView
+        android:id="@+id/user_center_cover_bg"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_usercenter_bg1" />
+
+    <com.demos.NestedScrolling.person_center.HeadLayout
+        android:id="@+id/head_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.demos.NestedScrolling.person_center.HeadBehavior">
+        <RelativeLayout
+            android:id="@+id/profile_details"
+            android:layout_width="match_parent"
+            android:layout_height="160dp">
+
+            <ImageView
+                android:id="@+id/iv_avatar"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="74dp"
+                android:src="@drawable/image_holder" />
+
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/iv_avatar"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@id/iv_avatar"
+                android:drawablePadding="5dp"
+                android:ellipsize="none"
+                android:gravity="center_horizontal"
+                android:singleLine="true"
+                android:text="name"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@id/iv_avatar"
+                android:background="@color/primaryDark"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:text="233积分"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_coupon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_name"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="7dp"
+                android:layout_toRightOf="@id/tv_integral"
+                android:background="@color/primaryDark"
+                android:paddingBottom="2dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="2dp"
+                android:text="233优惠券"
+                android:textColor="@android:color/white"
+                android:textSize="13sp" />
+
+        </RelativeLayout>
+    </com.demos.NestedScrolling.person_center.HeadLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recycleview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.demos.NestedScrolling.person_center.ContentLayoutBehavior" />
+
+</android.support.design.widget.CoordinatorLayout>

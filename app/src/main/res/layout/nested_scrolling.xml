@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <include layout="@layout/inc_toolbar"/>
+
+    <TextView
+        android:id="@+id/depentent"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="top|left"
+        android:background="#FFFF0000"
+        android:gravity="center"
+        android:text="depentent"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/tv_auto"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="top|right"
+        android:background="#FF00FF00"
+        android:gravity="center"
+        android:text="auto"
+        android:textColor="@android:color/white"
+        app:layout_behavior="com.demos.NestedScrolling.DependentBehavior"/>
+
+    <TextView
+        android:text="233"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"/>
+
+</android.support.design.widget.CoordinatorLayout>

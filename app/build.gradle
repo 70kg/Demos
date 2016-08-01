@@ -1,0 +1,61 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.neenbedankt.android-apt'//添加apt命令
+
+def cfg = rootProject.ext.configuration
+def libs = rootProject.ext.libraries;
+
+android {
+    compileSdkVersion cfg.compileVersion
+    buildToolsVersion cfg.buildToolsVersion
+
+
+    defaultConfig {
+        applicationId       cfg.package
+        minSdkVersion       cfg.minSdk
+        targetSdkVersion    cfg.targetSdk
+        versionCode         cfg.version_code
+        versionName         cfg.version_name
+        generatedDensities = []
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile "com.android.support:support-v4:${libs.supportVersion}"
+    compile "com.android.support:appcompat-v7:${libs.supportVersion}"
+    compile "com.android.support:design:${libs.supportVersion}"
+    compile "com.squareup.picasso:picasso:${libs.picasso}"
+    compile "com.github.zhaokaiqiang.klog:library:${libs.klog}"
+    compile "com.jakewharton:butterknife:${libs.butterknife}"
+    apt 'com.google.dagger:dagger-compiler:2.0.2'
+    compile 'com.google.dagger:dagger:2.0.2'
+    provided 'org.glassfish:javax.annotation:10.0-b28'
+    compile files('libs/lite-async-1.0.0.jar')
+    compile 'io.reactivex:rxjava:1.1.0'
+    compile 'io.reactivex:rxandroid:1.1.0'
+    compile 'com.squareup.retrofit2:retrofit:2.0.2'
+    compile 'com.squareup.retrofit2:converter-gson:2.0.0-beta4'
+    compile 'com.squareup.retrofit2:adapter-rxjava:2.0.0-beta4'
+    compile 'com.google.code.gson:gson:2.6.2'
+    compile 'com.squareup.okhttp3:logging-interceptor:3.0.0-RC1'
+    compile 'com.squareup.okhttp3:okhttp:3.2.0'
+    compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    // or 1.4-beta1
+    compile 'com.squareup:otto:1.3.8'
+    compile files('libs/volley.jar')
+    compile 'org.litepal.android:core:1.3.1'
+    compile 'com.google.android.agera:agera:1.0.0-rc2'
+    compile 'de.hdodenhof:circleimageview:1.3.0'
+    compile 'com.android.support:cardview-v7:23.2.1'
+    compile 'com.github.iwgang:simplifyspan:1.1'
+    compile project(':Libraries:DroidPlugin')
+
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:duration="500"
+        android:propertyName="pathData"
+        android:valueFrom="@string/zero"
+        android:valueTo="@string/one"
+        android:valueType="pathType" />
+    <objectAnimator
+        android:startOffset="1000"
+        android:duration="500"
+        android:propertyName="pathData"
+        android:valueFrom="@string/one"
+        android:valueTo="@string/two"
+        android:valueType="pathType" />
+</set>

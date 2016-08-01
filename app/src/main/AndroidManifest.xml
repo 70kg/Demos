@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.demos">
+
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.INTERNET"></uses-permission>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS"></uses-permission>
+
+
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name="com.demos.main.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.demos.CustomDialog.CustomDialogActivity" />
+        <activity android:name="com.demos.aidl.BookManagerActivity" />
+
+        <meta-data
+            android:name="BUG_HD_SDK_GENERAL_KEY"
+            android:value="ff102d45f96dbea444ee7f1853280bfd" />
+        <service android:name="com.demos.aidl.BookManagerService" />
+
+        <activity android:name=".viewdraghelper.SwipBackActivity" />
+        <activity android:name=".viewdraghelper.SecondActivity" />
+        <activity android:name=".asynchronous.AsyncTaskActivity" />
+        <activity android:name=".window.WindowActivity" />
+        <activity android:name=".checkbox.CheckBoxActivity" />
+        <activity android:name=".TwoBallsSeekbar.SeekBarActivity" />
+        <activity android:name=".NestedScrolling.NestedScrollingActivity" />
+        <activity android:name=".NestedScrolling.BehaviorActivity" />
+        <activity android:name=".NestedScrolling.FabActivity" />
+        <activity
+            android:name=".support_23_2.DayNightActivity"
+            android:theme="@style/MyDayNight" />
+        <activity android:name=".uploadPic.UpLoadPicActivity" />
+        <activity android:name=".headlist.PinnedSectionListActivity" />
+        <activity android:name=".headlist.RefreshListActivity" />
+        <activity android:name=".RequestQueue.QueueActivity" />
+        <activity android:name=".Bessel.BesselActivity" />
+        <activity android:name=".dragger.DraggerActivity" />
+        <activity android:name=".faceabstrct.FaceAbsActivity" />
+        <activity android:name=".service.ServiceActivity" />
+        <activity android:name=".douban.DouBanMovieActivity" />
+        <activity android:name=".imageLoader.ImageLoaderActivity" />
+        <activity android:name=".flux.FluxActivity" />
+        <activity android:name=".db.DbActivity" />
+        <activity android:name=".notification.NotificationActivity" />
+        <activity android:name=".recycleview.RecycleViewActivity" />
+
+        <receiver android:name=".notification.MyBroadcastReceiver" />
+
+        <service android:name=".window.WindowService" />
+        <service android:name=".service.TestService" />
+
+        <activity android:name=".mvvm.MvvmActivity" />
+        <activity android:name=".agera.AgeraActivity" />
+        <activity android:name=".agera.AgeraSecondActivity" />
+        <activity android:name=".NestedScrolling.person_center.PersonCenterActivity" />
+        <activity android:name=".NestedScrolling.others.OthersActivity" />
+        <activity android:name=".hook.simpleHook.FirstActivity" />
+
+        <activity android:name=".hook.simpleHook.intercept_activity.StubActivity" />
+        <activity android:name="com.demos.hook.simpleHook.weishu.WeishuActivity" />
+        <activity android:name="com.demos.hook.simpleHook.weishu.StubActivity" />
+    </application>
+
+</manifest>

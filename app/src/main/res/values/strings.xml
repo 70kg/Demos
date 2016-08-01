@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">My Demos</string>
+    <string name="action_settings">Settings</string>
+    <string name="zero">M50,0 c-30,0 -30,100 0,100 M50,100 c30,0 30,-100 0,-100</string>
+    <string name="one">M30,22 c8,-4 16,-12 22,-22 M50,0 c0,0 0,0 0,100</string>
+    <string name="two">M27,29 c10,-52 100,-15 0,63 M27,92 c0,0 0,0 56,0</string>
+    <dimen name="icon_size">50dp</dimen>
+
+
+    <string name="action_fastscroll">Fast scroll</string>
+    <string name="action_addpadding">Add padding</string>
+    <string name="action_showShadow">Show shadow</string>
+    <string name="action_showHeaderAndFooter">Show Header &amp; Footer</string>
+    <string name="action_updateDataset">Update dataset</string>
+</resources>
